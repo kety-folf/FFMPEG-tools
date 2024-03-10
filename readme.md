@@ -34,11 +34,9 @@ This is a simple Electron application for file conversion, encryption, and decry
 
 ## File Structure
 
-- `src/index.html`: Main HTML file for the Electron application.
 - `src/renderer.js`: Renderer process JavaScript file for handling user interactions.
-- `src/styles.css`: CSS file for styling the user interface.
 - `src/preload.js`: Preload script for exposing Electron APIs to the renderer process securely.
-- `src/index.js`: Main process JavaScript file for handling Electron main process logic.
+- `index.js`: Main process JavaScript file for handling Electron main process logic.
 
 ## Dependencies
 
