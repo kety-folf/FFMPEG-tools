@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Convert Files - FFMPEG Electron App</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Convert Files</h1>
+    <a class="button" href="index.html">home</a>
+    <h1></h1>
+    <input type="file" id="fileInput">
+    <div>
+        <label for="outputFormat">Output Format:</label>
+        <input type="text" id="outputFormat" placeholder="mp4">
+    </div>
+    <div>
+        <label for="videoResolution">Video Resolution:</label>
+        <input type="text" id="videoResolution" placeholder="1920*1080">
+    </div>
+    <div>
+        <label for="bitrate">Bitrate:</label>
+        <input type="text" id="bitrate" placeholder="5000k">
+    </div>
+    <button id="convertButton">Convert</button>
+    <div id="feedback"></div> 
+    <script src="renderer.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "av-tools",
+  "version": "1.0.0",
+  "description": "electron wraper for FFMPEG",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Kety-Folf",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^29.1.1"
+  },
+  "dependencies": {
+    "ffmpeg": "^0.0.4",
+    "ffmpeg-static": "^5.2.0",
+    "fluent-ffmpeg": "^2.1.2"
+  }
+}

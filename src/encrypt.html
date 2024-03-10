@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encrypt/Decrypt Files - FFMPEG Electron App</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Encrypt/Decrypt Files</h1>
+    <h1>currently still broken</h1>
+    <a class="button" href="index.html">home</a>
+    <h1></h1>
+    <input type="file" id="fileInput">
+    <div>
+        <label for="key">Key (Hex):</label>
+        <input type="text" id="key" placeholder="Enter encryption key">
+    </div>
+    <div>
+        <input type="radio" id="encryptRadio" name="operation" value="encrypt" checked>
+        <label for="encryptRadio">Encrypt</label>
+    </div>
+    <div>
+        <input type="radio" id="decryptRadio" name="operation" value="decrypt">
+        <label for="decryptRadio">Decrypt</label>
+    </div>
+    <button id="processButton">Process</button>
+    <div id="feedback"></div> 
+    <script src="renderer.js"></script>
+</body>
+</html>
