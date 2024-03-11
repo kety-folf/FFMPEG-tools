@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Convert Audio Files - FFMPEG Electron App</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Convert Audio Files</h1>
+    <a class="button" href="index.html">home</a>
+    <h1></h1>
+    <input type="file" id="fileInput">
+    <div>
+        <label for="outputFormat">Output Format:</label>
+        <select id="outputFormat">
+            <option value="mp3">MP3</option>
+            <option value="aac">AAC</option>
+            <option value="wav">WAV</option>
+            <option value="ogg">OGG</option>
+            <option value="flac">FLAC</option> <!-- Added FLAC option -->
+        </select>
+    </div>
+    <div>
+        <label for="bitrate">Bitrate:</label>
+        <select id="bitrate">
+            <option value="320k">Studio Quality (320 kbps)</option>
+            <option value="256k">High Quality (256 kbps)</option>
+            <option value="192k">CD Quality (192 kbps)</option>
+            <option value="128k">Radio Quality (128 kbps)</option>
+        </select>
+    </div>
+    <button id="convertAudioButton">Convert</button>
+    <div id="feedback"></div> 
+    <script src="renderer.js"></script>
+</body>
+</html>

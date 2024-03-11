@@ -51,6 +51,26 @@ ipcMain.on('convert', (event, { filePath, outputFormat, videoResolution, bitrate
         event.sender.send('conversion-successful', outputFile);
     });
 }); 
+ipcMain.on('convertAudio', (event, { filePath, outputFormat, bitrate }) => {
+    // Check if any parameter is undefined
+    if (!filePath || !outputFormat || !bitrate) {
+        console.error('Error: One or more parameters are undefined.');
+        return;
+    }
+
+    const outputFile = `${filePath}_converted.${outputFormat}`;
+
+    const ffmpegCommand = `ffmpeg -i "${filePath}" -b:a "${bitrate}" "${outputFile}"`;
+
+    exec(ffmpegCommand, (error, stdout, stderr) => {
+        if (error) {
+            console.error(`Error converting file: ${error.message}`);
+            return;
+        }
+        console.log(`File converted successfully: ${outputFile}`);
+        event.sender.send('conversion-successful', outputFile);
+    });
+});
 
 ipcMain.on('process', (event, { filePath, key, operation }) => {
     console.log(`Processing file: ${filePath}, Key: ${key}, Operation: ${operation}`);

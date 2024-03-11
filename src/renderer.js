@@ -1,5 +1,6 @@
 const convertButton = document.querySelector('#convertButton');
 const processButton = document.querySelector('#processButton');
+const convertAudioButton = document.querySelector('#convertAudioButton');
 const fileInput = document.querySelector('#fileInput');
 const keyInput = document.querySelector('#key');
 const encryptRadio = document.querySelector('#encryptRadio');
@@ -18,7 +19,16 @@ convertButton?.addEventListener('click', () => {
     
     ipcRenderer.send('convert', { filePath, outputFormat, videoResolution, bitrate });
 });
-
+convertAudioButton?.addEventListener('click', () => {
+    // Show conversion feedback
+    feedbackDiv.textContent = 'Converting file...';
+    
+    const filePath = fileInput.files[0].path;
+    const outputFormat = document.querySelector('#outputFormat').value;
+    const bitrate = document.querySelector('#bitrate').value;
+    
+    ipcRenderer.send('convertAudio', { filePath, outputFormat, bitrate });
+});
 // Send file encryption/decryption request to main process
 processButton?.addEventListener('click', () => {
     // Show encryption/decryption feedback
