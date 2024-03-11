@@ -42,24 +42,29 @@ processButton?.addEventListener('click', () => {
 });
 
 // Event listener for conversion and encryption/decryption success events
-ipcRenderer.on('conversion-successful', (event, outputFile) => {
+ipcRenderer.receive('conversion-successful', (event, outputFile) => {
     updateFeedback(`Converted: ${outputFile}`);
+    console.log("ipcrender ran")
 });
 
-ipcRenderer.on('encrypt-successful', (event, outputFile) => {
+ipcRenderer.receive('encrypt-successful', (event, outputFile) => {
     updateFeedback(`Encrypted: ${outputFile}_encrypted.mp4`);
+    console.log("ipcrender ran")
 });
 
-ipcRenderer.on('decrypt-successful', (event, outputFile) => {
+ipcRenderer.receive('decrypt-successful', (event, outputFile) => {
     updateFeedback(`Decrypted: ${outputFile}_decrypted.mp4`);
+    console.log("ipcrender ran")
 });
 
 // Event listener for errors during conversion or encryption/decryption
-ipcRenderer.on('error', (event, errorMessage) => {
+ipcRenderer.receive('error', (event, errorMessage) => {
     updateFeedback(`Error: ${errorMessage}`);
+    console.log("ipcrender ran")
 });
 
 // Function to update feedback messages
 function updateFeedback(message) {
     feedbackDiv.textContent = message;
+    console.log("update function for feedbackdiv ran")
 }
