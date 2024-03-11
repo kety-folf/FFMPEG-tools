@@ -7,7 +7,7 @@ const decryptRadio = document.querySelector('#decryptRadio');
 const feedbackDiv = document.querySelector('#feedback');
 
 // Send file conversion request to main process
-convertButton.addEventListener('click', () => {
+convertButton?.addEventListener('click', () => {
     // Show conversion feedback
     feedbackDiv.textContent = 'Converting file...';
     
@@ -20,7 +20,7 @@ convertButton.addEventListener('click', () => {
 });
 
 // Send file encryption/decryption request to main process
-processButton.addEventListener('click', () => {
+processButton?.addEventListener('click', () => {
     // Show encryption/decryption feedback
     feedbackDiv.textContent = 'Processing file...';
 
@@ -36,7 +36,7 @@ ipcRenderer.on('conversion-successful', (event, outputFile) => {
     updateFeedback(`Converted: ${outputFile}`);
 });
 
-ipcRenderer.on('encrypting-successful', (event, outputFile) => {
+ipcRenderer.on('encrypt-successful', (event, outputFile) => {
     updateFeedback(`Encrypted: ${outputFile}_encrypted.mp4`);
 });
 
