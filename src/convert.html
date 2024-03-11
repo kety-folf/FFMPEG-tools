@@ -11,15 +11,29 @@
     <input type="file" id="fileInput">
     <div>
         <label for="outputFormat">Output Format:</label>
-        <input type="text" id="outputFormat" placeholder="mp4">
+        <select id="outputFormat">
+            <option value="mp4">MP4</option>
+            <option value="avi">AVI</option>
+            <option value="mov">MOV</option>
+            <option value="webm">WebM</option>
+        </select>
     </div>
     <div>
         <label for="videoResolution">Video Resolution:</label>
-        <input type="text" id="videoResolution" placeholder="1920*1080">
+        <select id="videoResolution">
+            <option value="1920*1080">1920*1080 (1080p)</option>
+            <option value="1280*720">1280*720 (720p)</option>
+            <option value="854*480">854*480 (480p)</option>
+            <option value="3840*2160">3840*2160 (4K)</option>
+        </select>
     </div>
     <div>
         <label for="bitrate">Bitrate:</label>
-        <input type="text" id="bitrate" placeholder="5000k">
+        <select id="bitrate">
+            <option value="5000k">5000k</option>
+            <option value="3000k">3000k</option>
+            <!-- Add more options as needed -->
+        </select>
     </div>
     <button id="convertButton">Convert</button>
     <div id="feedback"></div> 
