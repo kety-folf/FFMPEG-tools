@@ -4,8 +4,8 @@ This is a simple Electron application for file conversion, encryption, and decry
 
 ## Features
 
-- Convert video files to different formats.
-- Encrypt video files using FFMPEG's encryption capabilities.
+- Convert video and audio files to different formats.
+- Encrypt MP4 files using FFMPEG's encryption capabilities.
 - Decrypt encrypted video files.
 
 ## Installation

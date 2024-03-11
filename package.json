@@ -7,7 +7,7 @@
     "start": "electron ."
   },
   "author": "Kety-Folf",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "electron": "^29.1.1"
   },
