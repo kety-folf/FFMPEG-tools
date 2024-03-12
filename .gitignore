@@ -1,1 +1,8 @@
+.vscode/
 node_modules/
+ffmpeg-tools-win32-x64/
+FFmpeg_tools_installer.exe
+installer.nsi
+package-lock.json
+update.bat
+yt-dlp.exe

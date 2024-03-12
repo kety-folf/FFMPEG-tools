@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Downloader - FFMPEG Electron App</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>YouTube Downloader</h1>
+    <a class="button" href="index.html">Home</a>
+    <h1></h1>
+    <input type="text" id="videoUrl" placeholder="Enter YouTube Video URL">
+
+    <div>
+        <label for="outputType">Select Output Type:</label><br>
+        <input type="radio" id="videoType" name="outputType" value="video" checked>
+        <label for="videoType">Video</label><br>
+        <input type="radio" id="audioType" name="outputType" value="audio">
+        <label for="audioType">Audio</label><br>
+    </div>
+
+    <div>
+        <label for="outputFolder">Select Output Folder:</label>
+        <input type="file" id="outputFolder" webkitdirectory directory>
+    </div>
+
+    <button id="downloadButton">Download</button>
+    <button id="updateYTdlpButton">Update YT-dlp</button> <!-- New button -->
+
+    <div id="feedback"></div> 
+    <script src="renderer.js"></script>
+</body>
+</html>
