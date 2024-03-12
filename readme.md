@@ -7,7 +7,7 @@ This is a simple Electron application for file conversion, encryption, and decry
 - Convert video and audio files to different formats.
 - Encrypt MP4 files using FFMPEG's encryption capabilities.
 - Decrypt encrypted video files.
-
+- yt-dlp
 ## Installation
 
 1. Clone this repository:
